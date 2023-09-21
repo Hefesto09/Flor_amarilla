@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url(ser.jpg); /* cambiar imagen */
+}
+
+.contenedor {
+    position: relative;
+}
+
+.centro {
+    width: 202px;
+    height: 202px;
+    background-color: rgb(85, 31, 31);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(231, 184, 53);
+}
+
+@keyframes entrada {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.petalo1,
+.petalo2,
+.petalo3,
+.petalo4,
+.petalo5,
+.petalo6,
+.petalo7,
+.petalo8 {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(231, 231, 16);
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    animation: entrada 0.5s ease-in-out;
+}
+
+.petalo1 {
+    transform: translate(-50%, -50%) translateX(-120px);
+    animation-delay: 0s;
+}
+
+.petalo2 {
+    transform: translate(-50%, -50%) translateY(-120px) rotate(90deg);
+    animation-delay: 0.1s;
+}
+
+.petalo3 {
+    transform: translate(-50%, -50%) translateY(-100px) translateX(100px) rotate(140deg);
+    animation-delay: 0.2s;
+}
+
+.petalo4 {
+    transform: translate(-50%, -50%) translateX(120px) rotate(180deg);
+    animation-delay: 0.3s;
+}
+
+.petalo5 {
+    transform: translate(-50%, -50%) translateY(120px) rotate(270deg);
+    animation-delay: 0.4s;
+}
+
+.petalo6 {
+    transform: translate(-50%, -50%) translateY(-100px) translateX(-100px) rotate(-140deg);
+    animation-delay: 0.5s;
+}
+
+.petalo7 {
+    transform: translate(-50%, -50%) translateY(100px) translateX(-100px) rotate(140deg);
+    animation-delay: 0.6s;
+}
+
+.petalo8 {
+    transform: translate(-50%, -50%) translateY(100px) translateX(100px) rotate(45deg);
+    animation-delay: 0.7s;
+}
